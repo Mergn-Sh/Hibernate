@@ -33,8 +33,8 @@ public class Util {
                 settings.put(Environment.SHOW_SQL, "true");
                 settings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
 
-                configuration.setProperties(settings);
-                configuration.addAnnotatedClass(User.class);
+                configuration.setProperties(settings).addAnnotatedClass(User.class);
+
                 ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                         .applySettings(configuration.getProperties()).build();
 
