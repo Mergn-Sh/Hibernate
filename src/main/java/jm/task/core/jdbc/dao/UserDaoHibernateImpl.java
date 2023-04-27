@@ -8,8 +8,6 @@ import org.hibernate.SessionFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-import static jm.task.core.jdbc.util.Util.getConnectionHibernate;
-
 public class UserDaoHibernateImpl implements UserDao {
     private static final SessionFactory sessionFactory = Util.getConnectionHibernate();
     public UserDaoHibernateImpl() {
