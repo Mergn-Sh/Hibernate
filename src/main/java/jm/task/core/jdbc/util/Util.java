@@ -42,6 +42,10 @@ public class Util {
             } catch (Exception e){
                 System.out.println("Проблемы с созданием подключения");
                 e.printStackTrace();
+            } finally {
+                if(sessionFactory == null){
+                    sessionFactory.close();
+                }
             }
         }
         return sessionFactory;
